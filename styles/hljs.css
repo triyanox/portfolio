@@ -1,0 +1,58 @@
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  font-family: 'Generator', monospace;
+  position: relative;
+}
+code.hljs {
+  padding: 20px 2px;
+}
+
+.hljs ::selection,
+.hljs::selection {
+  background-color: #919191;
+  color: rgb(0, 0, 0);
+}
+
+.hljs-attr,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-symbol,
+.hljs-variable.constant_ {
+  color: #4876d6;
+}
+.hljs-class .hljs-title,
+.hljs-title,
+.hljs-title.class_ {
+  color: #4876d6;
+}
+.hljs-strong {
+  font-weight: 700;
+  color: #994cc3;
+}
+.hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: #994cc3;
+}
+.hljs-built_in,
+.hljs-doctag,
+.hljs-keyword.hljs-atrule,
+.hljs-quote,
+.hljs-regexp {
+  color: #4876d6;
+}
+.hljs-attribute,
+.hljs-function .hljs-title,
+.hljs-section,
+.hljs-title.function_,
+.ruby .hljs-property {
+  color: #994cc3;
+}
+
+.hljs-meta .hljs-keyword,
+.hljs-meta-keyword {
+  font-weight: 700;
+}
