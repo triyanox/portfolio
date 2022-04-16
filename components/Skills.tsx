@@ -1,5 +1,5 @@
 import { Description } from './Description'
-import { Option } from './Option'
+import { Option, OptionSelected } from './Option'
 import { useState } from 'react'
 
 const Skills = () => {
@@ -17,14 +17,43 @@ const Skills = () => {
       </div>
       <div className="flex w-full flex-col justify-center  gap-4 md:flex-row">
         <div className="mb-4 flex w-full flex-row items-start justify-start gap-2 gap-x-4 overflow-scroll md:mb-0 md:flex-col ">
-          <Option text="UI" handleClick={() => setSkill('UI')} />
-          <Option text="UX" handleClick={() => setSkill('UX')} />
-          <Option text="Backend" handleClick={() => setSkill('Backend')} />
-          <Option text="Frontend" handleClick={() => setSkill('Frontend')} />
-          <Option
-            text="Softskills"
-            handleClick={() => setSkill('Softskills')}
-          />
+          {skill === 'UI' ? (
+            <OptionSelected text="UI" handleClick={() => setSkill('UI')} />
+          ) : (
+            <Option text="UI" handleClick={() => setSkill('UI')} />
+          )}
+          {skill === 'UX' ? (
+            <OptionSelected text="UX" handleClick={() => setSkill('UX')} />
+          ) : (
+            <Option text="UX" handleClick={() => setSkill('UX')} />
+          )}
+          {skill === 'Backend' ? (
+            <OptionSelected
+              text="Backend"
+              handleClick={() => setSkill('Backend')}
+            />
+          ) : (
+            <Option text="Backend" handleClick={() => setSkill('Backend')} />
+          )}
+          {skill === 'Frontend' ? (
+            <OptionSelected
+              text="Frontend"
+              handleClick={() => setSkill('Frontend')}
+            />
+          ) : (
+            <Option text="Frontend" handleClick={() => setSkill('Frontend')} />
+          )}
+          {skill === 'Softskills' ? (
+            <OptionSelected
+              text="SoftSkills"
+              handleClick={() => setSkill('SoftSkills')}
+            />
+          ) : (
+            <Option
+              text="Softskills"
+              handleClick={() => setSkill('Softskills')}
+            />
+          )}
         </div>
         <div className="   flex w-full flex-col items-start justify-center gap-2 md:mt-0">
           {skill === 'UI' && (

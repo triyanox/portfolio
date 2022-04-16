@@ -14,7 +14,7 @@ export const Button = (props: Props) => {
 
 export const ButtonWhite = (props: Props) => {
   return (
-    <button className="flex flex-row items-center justify-center gap-2 rounded-full  px-6 py-2  text-xl text-black outline-4 outline-offset-2 outline-gray-600 transition-all duration-200 hover:scale-110 hover:outline  active:scale-95    dark:text-white  dark:outline-gray-400 ">
+    <button className=" flex flex-row items-center justify-center gap-2  rounded-full   px-6 py-2 text-xl text-black transition-all duration-200 hover:scale-110   active:scale-95      dark:text-white ">
       {props.text}{' '}
     </button>
   )

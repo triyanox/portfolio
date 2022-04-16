@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export type Option = {
   text: string
@@ -7,20 +7,44 @@ export type Option = {
 
 export const Option = (props: Option) => {
   return (
-    <motion.button
-      whileTap={{
-        scale: 0.9,
-        transition: {
-          duration: 0.2,
+    <AnimatePresence exitBeforeEnter>
+      <motion.button
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, transformOrigin: 'center' }}
+        exit={{ scale: 0 }}
+        transition={{
+          duration: 0.4,
           stiffness: 100,
           type: 'spring',
-          damping: 10,
-        },
-      }}
-      onClick={props.handleClick}
-      className="rounded-full bg-black px-4 py-1 text-2xl font-semibold text-gray-200 dark:bg-white dark:text-gray-800"
-    >
-      {props.text}
-    </motion.button>
+          damping: 15,
+        }}
+        onClick={props.handleClick}
+        className="rounded-full bg-black px-4 py-1 text-2xl font-semibold text-gray-200 dark:bg-white dark:text-gray-800"
+      >
+        {props.text}
+      </motion.button>
+    </AnimatePresence>
+  )
+}
+
+export const OptionSelected = (props: Option) => {
+  return (
+    <AnimatePresence exitBeforeEnter>
+      <motion.button
+        initial={{ scale: 0 }}
+        animate={{ scale: 1, transformOrigin: 'center' }}
+        exit={{ scale: 0 }}
+        transition={{
+          duration: 0.4,
+          stiffness: 100,
+          type: 'spring',
+          damping: 15,
+        }}
+        onClick={props.handleClick}
+        className="rounded-full  px-4 py-1 text-2xl font-semibold text-gray-800  dark:text-gray-200"
+      >
+        {props.text}
+      </motion.button>
+    </AnimatePresence>
   )
 }
