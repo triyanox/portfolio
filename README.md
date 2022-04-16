@@ -1,7 +1,6 @@
 # My Personal Website
 
-This is my personal website built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/) for styling and [MDX](https://mdxjs.com/) for the content.
-Deployed on [Vercel](https://vercel.com/).
+This is my personal website built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), [Tailwind CSS](https://tailwindcss.com/) for styling and [MDX](https://mdxjs.com/) for the content and deployed on [Vercel](https://vercel.com/).
 
 ## Project Structure
 
