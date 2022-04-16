@@ -46,7 +46,7 @@ const Skills = () => {
           {skill === 'Softskills' ? (
             <OptionSelected
               text="SoftSkills"
-              handleClick={() => setSkill('SoftSkills')}
+              handleClick={() => setSkill('Softskills')}
             />
           ) : (
             <Option

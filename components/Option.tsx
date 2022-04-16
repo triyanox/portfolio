@@ -10,7 +10,7 @@ export const Option = (props: Option) => {
     <AnimatePresence exitBeforeEnter>
       <motion.button
         initial={{ scale: 0 }}
-        animate={{ scale: 1, transformOrigin: 'center' }}
+        animate={{ scale: 1, transformOrigin: 'left' }}
         exit={{ scale: 0 }}
         transition={{
           duration: 0.4,
@@ -31,9 +31,9 @@ export const OptionSelected = (props: Option) => {
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1, transformOrigin: 'center' }}
-        exit={{ scale: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 100, transformOrigin: 'left' }}
+        exit={{ opacity: 0 }}
         transition={{
           duration: 0.4,
           stiffness: 100,
