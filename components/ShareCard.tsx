@@ -8,7 +8,7 @@ type Props = {
 const ShareCard = (props: Props) => {
   return (
     <div className="mt-12 flex flex-row items-center justify-center gap-12 rounded-xl bg-gray-200 p-6 dark:bg-zinc-800">
-      <div className="flex flex-row items-center justify-start ">
+      <div className="flex flex-row items-center justify-center ">
         <p className="dark:text-blueGray-500 mt-2 text-lg font-medium text-gray-600 dark:text-gray-400">
           Spread the word
         </p>

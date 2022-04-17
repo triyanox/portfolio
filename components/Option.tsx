@@ -9,11 +9,11 @@ export const Option = (props: Option) => {
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1, transformOrigin: 'left' }}
-        exit={{ scale: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transformOrigin: 'left' }}
+        exit={{ opacity: 0 }}
         transition={{
-          duration: 0.4,
+          duration: 0.8,
           stiffness: 100,
           type: 'spring',
           damping: 15,
