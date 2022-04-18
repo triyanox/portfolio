@@ -42,10 +42,7 @@ yarn
 
 Then run the development server:
 
-````
-
-```bash
-
+````bash
 yarn dev
 
 ````
