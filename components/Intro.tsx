@@ -32,7 +32,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="mt-24 hidden w-full flex-col items-center justify-center gap-2 md:mt-0 md:flex">
-        <Parallax speed={-15}>
+        <Parallax speed={-10}>
           <Image
             src={achaq}
             width={400}
