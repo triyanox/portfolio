@@ -147,7 +147,7 @@ docker container log flask-docker-boilerplate
 
 ## DockerHub
 
-(Docker Hub)[https://hub.docker.com/] is a website that allows you to share your Docker images with the community, and this type of services known as **registries** or **central registries**, and you can integrate them in you CI/CMD
+[Docker Hub website](https://hub.docker.com/) is a website that allows you to share your Docker images with the community, and this type of services known as **registries** or **central registries**, and you can integrate them in you CI/CMD
 pipeline just like you integrate your GitHub repository.
 
 To push your image to Docker Hub you need to follow the following steps:
@@ -171,7 +171,7 @@ Then you will be asked to enter your username and password.
 Then you need to tag your image with the name of your project and the version of your application.
 
 ```bash:bash
-docker tag flask-docker-boilerplate achaq/flask-docker-boilerplate:latest
+docker tag flask-docker-boilerplate [your_docker_hub_username]/flask-docker-boilerplate:latest
 ```
 
 ### Push your image to Docker Hub
@@ -179,7 +179,7 @@ docker tag flask-docker-boilerplate achaq/flask-docker-boilerplate:latest
 Finally you need to push your image to Docker Hub.
 
 ```bash:bash
-docker push achaq/flask-docker-boilerplate:latest
+docker push [your_docker_hub_username]/flask-docker-boilerplate:latest
 ```
 
 ## Deploy changes
@@ -209,7 +209,7 @@ docker build -t flask-docker-boilerplate .
 Then push the image to Docker Hub by using the following command:
 
 ```bash:bash
-docker push achaq/flask-docker-boilerplate:latest
+docker push [your_docker_hub_username]/flask-docker-boilerplate:latest
 ```
 
 ## Caching mechanism
