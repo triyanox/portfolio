@@ -21,7 +21,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-scroll-parallax": "^3.0.6",
     "rehype-code-titles": "^1.0.3",
     "rehype-highlight": "^5.0.2",
     "rehype-image-placeholder": "^1.0.1",
