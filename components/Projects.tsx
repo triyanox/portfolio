@@ -54,9 +54,26 @@ function Projects() {
           title="Shortify"
           image="/projects/shortify.png"
           preview="https://shortify.achaq.codes"
-          source="https://github.com/triyanox/shortify-server"
+          source="https://github.com/triyanox/shortify-client"
           id={2}
           description="URL shortener service built with Next.js,  Node.js, Express, and MongoDB."
+          stack={[
+            <Nextdotjs />,
+            <Reactdotjs />,
+            <Tailwindcss />,
+            <Typescript />,
+            <Nodedotjs />,
+            <Express />,
+            <Mongodb />,
+          ]}
+        />
+        <FeaturedProjectsCard
+          title="Omoide"
+          image="/projects/omoide.png"
+          preview="https://omoide.achaq.codes"
+          source="https://github.com/triyanox/omoide-client"
+          id={3}
+          description="A platform for sharing memories and experiences with the world."
           stack={[
             <Nextdotjs />,
             <Reactdotjs />,
