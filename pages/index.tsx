@@ -32,13 +32,11 @@ const Home: NextPage<PostsProps> = ({ posts }) => {
       description="Full Stack Developer"
       preview="home"
     >
-      <ParallaxProvider>
-        <Intro />
-        <Skills />
-        <FeaturedProjects />
-        <FeaturedPosts posts={posts} />
-        <CTA />
-      </ParallaxProvider>
+      <Intro />
+      <Skills />
+      <FeaturedProjects />
+      <FeaturedPosts posts={posts} />
+      <CTA />
     </Main>
   )
 }
