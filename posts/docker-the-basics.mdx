@@ -10,7 +10,7 @@ link: 'docker-the-basics'
 ---
 
 <Imagecomponent
-  src={`/static/images/run-everything-from-a-docker-container.png`}
+  src={`/static/images/docker-the-basics.png`}
   alt={`Run everything from a Docker container`}
   width={1920}
   height={1080}
@@ -31,7 +31,7 @@ Essentially, Docker to replicate environments using containers.
 To make a container you will need an image, which is a bleuprint of the container you want to create, to simplify things an image is like a class
 and you will use this class to create multiple instances of the same container.
 
-And using Docker you don't have to deal with all the junk add by virtualized operating systems that may consume a lot of resources,
+And using Docker you don't have to deal with all the junk added by virtualized operating systems that may consume a lot of resources,
 and you can be free of the **worked on my machine syndrome** , and you can easlly create the environment needed to run your application.
 
 ## Dockerfile
@@ -147,7 +147,7 @@ docker container log flask-docker-boilerplate
 
 ## DockerHub
 
-(Docker Hub)[https://hub.docker.com/] is a website that allows you to share your Docker images with the community, and this type of services known as **registries** or **central registries**, and you can integrate them in you CI/CMD
+[Docker Hub website](https://hub.docker.com/) is a website that allows you to share your Docker images with the community, and this type of services known as **registries** or **central registries**, and you can integrate them in you CI/CMD
 pipeline just like you integrate your GitHub repository.
 
 To push your image to Docker Hub you need to follow the following steps:
@@ -171,7 +171,7 @@ Then you will be asked to enter your username and password.
 Then you need to tag your image with the name of your project and the version of your application.
 
 ```bash:bash
-docker tag flask-docker-boilerplate achaq/flask-docker-boilerplate:latest
+docker tag flask-docker-boilerplate [your_docker_hub_username]/flask-docker-boilerplate:latest
 ```
 
 ### Push your image to Docker Hub
@@ -179,7 +179,7 @@ docker tag flask-docker-boilerplate achaq/flask-docker-boilerplate:latest
 Finally you need to push your image to Docker Hub.
 
 ```bash:bash
-docker push achaq/flask-docker-boilerplate:latest
+docker push [your_docker_hub_username]/flask-docker-boilerplate:latest
 ```
 
 ## Deploy changes
@@ -209,7 +209,7 @@ docker build -t flask-docker-boilerplate .
 Then push the image to Docker Hub by using the following command:
 
 ```bash:bash
-docker push achaq/flask-docker-boilerplate:latest
+docker push [your_docker_hub_username]/flask-docker-boilerplate:latest
 ```
 
 ## Caching mechanism
