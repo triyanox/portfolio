@@ -1,7 +1,6 @@
 import { Button, ButtonWhite } from './EmailButton'
 import achaq from '../assets/achaq.jpg'
 import Image from 'next/image'
-import { Parallax } from 'react-scroll-parallax'
 import Link from 'next/link'
 const Intro = () => {
   return (

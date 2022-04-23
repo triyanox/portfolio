@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import '../styles/hljs.css'
 import { AnimatePresence, motion } from 'framer-motion'
 function MyApp({ Component, pageProps, router }: AppProps) {
-  const AnyComponent = Component as any;
+  const AnyComponent = Component as any
   return (
     <AnimatePresence exitBeforeEnter>
       <motion.div
