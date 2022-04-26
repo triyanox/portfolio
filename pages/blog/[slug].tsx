@@ -19,10 +19,13 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 
 import Imagecomponent from '../../components/ImageComponent'
 import CodeBlock from '../../components/CodeBlock'
+import CustomLink from '../../components/CustomLink'
+import rehypeAutolinkHeadings from 'remark-autolink-headings'
 
 const components = {
   pre: CodeBlock,
   Imagecomponent,
+  a: CustomLink,
 }
 
 export const getStaticPaths = async () => {
@@ -61,6 +64,14 @@ export const getStaticProps = async ({ params: { slug } }: Params) => {
         remarkSmartypants,
         [remarkTableofContents, { tight: true }],
         remarkUnwrapImages,
+        [
+          rehypeAutolinkHeadings,
+          {
+            properties: {
+              className: ['anchor'],
+            },
+          },
+        ],
       ],
       rehypePlugins: [rehypeCodeTitles, rehypeHighlight],
     },
