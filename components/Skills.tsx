@@ -16,7 +16,7 @@ const Skills = () => {
         </p>
       </div>
       <div className="flex w-full flex-col justify-center  gap-4 md:flex-row">
-        <div className="mb-4 flex w-full flex-row items-start justify-start gap-2 gap-x-4 overflow-scroll md:mb-0 md:flex-col ">
+        <div className="mb-4 flex w-full flex-row items-start justify-start gap-2 gap-x-4 overflow-scroll md:overflow-none md:mb-0 md:flex-col ">
           {skill === 'UI' ? (
             <OptionSelected text="UI" handleClick={() => setSkill('UI')} />
           ) : (
