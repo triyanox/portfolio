@@ -31,7 +31,7 @@ const BlogPrev = (props: Props) => {
           stiffness: 100,
           elapsed: 1,
         }}
-        className="relative flex h-full w-full flex-col justify-center  rounded-[12px] bg-gray-200 p-8   transition-all duration-300 hover:scale-105  dark:bg-zinc-800"
+        className="relative flex h-full w-full flex-col justify-center  rounded-[30px] bg-gray-100 p-8   transition-all duration-300 hover:scale-105  dark:bg-zinc-900"
       >
         <div className="flex flex-col gap-4 ">
           {/* <div>

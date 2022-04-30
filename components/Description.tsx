@@ -27,7 +27,7 @@ export const Description = (props: Description) => {
           stiffness: 100,
           elapsed: 1,
         }}
-        className="justify-cente flex items-center rounded-xl bg-gray-200 p-8 dark:bg-zinc-800"
+        className="justify-cente flex items-center rounded-[30px] bg-gray-100 p-8 dark:bg-zinc-900"
       >
         <p className="text-2xl font-medium text-gray-600 dark:text-gray-400 ">
           {props.text}
