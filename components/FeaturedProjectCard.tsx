@@ -16,7 +16,7 @@ type Props = {
 const FeaturedProjectsCard = (props: Props) => {
   return (
     <div className="flex  w-full  items-center justify-start gap-4 rounded-[30px] bg-white  dark:bg-black ">
-      <div className="relative flex h-full w-full flex-col justify-center gap-2 rounded-[12px] bg-gray-200 p-8  dark:bg-zinc-800  ">
+      <div className="relative flex h-full w-full flex-col justify-center gap-2 rounded-[12px] bg-gray-100 p-8  dark:bg-zinc-900  ">
         <div className="flex flex-col gap-4 ">
           {/* <div>
             <Image
