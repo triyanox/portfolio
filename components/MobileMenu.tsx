@@ -54,7 +54,7 @@ function MobileMenu() {
               stiffness: 100,
               elapsed: 1,
             }}
-            className="fixed top-0 bottom-0 z-40 m-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-zinc-50  pt-12 text-4xl font-light text-black dark:bg-zinc-900 dark:text-white "
+            className="fixed top-0 bottom-0 z-40 m-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-zinc-50  pt-12 text-4xl font-light text-black dark:bg-zinc-900 dark:text-white bg-white dark:bg-black"
           >
             <NavItem href="/" text="Home" />
             <NavItem href="/projects" text="Projects" />
