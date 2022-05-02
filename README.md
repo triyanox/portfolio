@@ -6,25 +6,25 @@ This is my personal website built with [Next.js](https://nextjs.org/), [TypeScri
 
 This project is split into the following sections:
 
-    1 [Components](#components)
-    2 [Pages](#pages)
-    3 [Data](#data)
-    4 [Layouts](#layouts)
-    5 [Posts](#posts)
-    6 [Assets](#assets)
-    7 [Styles](#styles)
-    8 [Scripts](#scripts)
-
+* [Components](#components)
+* [Pages](#pages)
+* [Data](#data)
+* [Layouts](#layouts)
+* [Posts](#posts)
+* [Assets](#assets)
+* [Styles](#styles)
+* [Scripts](#scripts)
+ 
 ## Libraries
 
 This project includes the following libraries:
 
-    * [Next.js](https://nextjs.org/)
-    * [TypeScript](https://www.typescriptlang.org/)
-    * [Tailwind CSS](https://tailwindcss.com/)
-    * [MDX](https://mdxjs.com/)
-    * [Framer Motion](https://framer.com/motion/)
-    * [next-mdx-remote]()
+* [Next.js](https://nextjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [MDX](https://mdxjs.com/)
+* [Framer Motion](https://framer.com/motion/)
+* [next-mdx-remote]()
 
 ## Usage
 
