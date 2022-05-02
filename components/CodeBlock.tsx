@@ -18,10 +18,7 @@ export default function CodeBlock({ children }: CodeBlockProps) {
 
   return (
     <div className="code-block">
-      <pre ref={preRef}>
-        {children}
-
-        <button
+       <button
           onClick={copy}
           className="copy transition-all duration-200 hover:scale-125"
         >
@@ -51,6 +48,8 @@ export default function CodeBlock({ children }: CodeBlockProps) {
             </span>
           )}
         </button>
+      <pre ref={preRef}>
+        {children}
       </pre>
 
       <style jsx>
