@@ -6,14 +6,14 @@ This is my personal website built with [Next.js](https://nextjs.org/), [TypeScri
 
 This project is split into the following sections:
 
-    * [Components](#components)
-    * [Pages](#pages)
-    * [Data](#data)
-    * [Layouts](#layouts)
-    * [Posts](#posts)
-    * [Assets](#assets)
-    * [Styles](#styles)
-    * [Scripts](#scripts)
+    1 [Components](#components)
+    2 [Pages](#pages)
+    3 [Data](#data)
+    4 [Layouts](#layouts)
+    5 [Posts](#posts)
+    6 [Assets](#assets)
+    7 [Styles](#styles)
+    8 [Scripts](#scripts)
 
 ## Libraries
 
