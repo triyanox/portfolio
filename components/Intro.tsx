@@ -33,9 +33,9 @@ const Intro = () => {
       <div className="mt-24 hidden w-full flex-col items-center justify-center gap-2 md:mt-0 md:flex">
         <Image
           src={achaq}
-          width={400}
+          width={300}
           className="rounded-full"
-          height={400}
+          height={300}
           alt="Achaq"
         />
       </div>
