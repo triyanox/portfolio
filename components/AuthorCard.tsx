@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import achaq from '../assets/achaq.jpg'
+import achaq from '../assets/achaq.png'
 
 const AuthorCard = () => {
   return (
