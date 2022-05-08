@@ -15,10 +15,10 @@ const AuthorCard = () => {
         />
       </div>
       <div className="flex flex-col items-start justify-center ">
-        <h3 className="text-xl font-semibold  text-black dark:text-white  md:text-2xl">
+        <h3 className="text-2xl font-bold  bg-gradient-to-r dark:from-cyan-400 dark:to-green-300 text-transparent bg-clip-text from-cyan-400 to-blue-600  md:text-2xl">
           Mohamed Achaq
         </h3>
-        <p className="text-md font-normal text-gray-600 dark:text-gray-400 ">
+        <p className="text-md text-gray-600 dark:text-gray-400 ">
           Full Stack Developer, UI/UX Designer, and a passionate learner. Making
           the web a better place by building great products.
         </p>
