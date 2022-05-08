@@ -18,7 +18,7 @@ const Toggle = () => {
         <button
           aria-label="Light Theme"
           onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-          className="cursor-pointer text-2xl text-black transition-all duration-500 active:rotate-90 dark:text-white"
+          className="cursor-pointer text-3xl text-black transition-all duration-500 active:rotate-90 dark:text-white"
         >
           <WiMoonFull />
         </button>
