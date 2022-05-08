@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-
+import Image from 'next/image'
 interface Props {
   readTime: number
   date: string
@@ -31,7 +31,7 @@ const BlogPrev = (props: Props) => {
           stiffness: 100,
           elapsed: 1,
         }}
-        className="relative flex h-full w-full flex-col justify-center  rounded-[30px] bg-gray-100 p-8   transition-all duration-300 hover:scale-105  dark:bg-zinc-900"
+        className="relative flex h-full w-full flex-col justify-center  rounded-[30px] bg-gray-50 p-8   transition-all duration-300 hover:scale-105  dark:bg-zinc-900"
       >
         <div className="flex flex-col gap-4 ">
           {/* <div>
@@ -40,12 +40,13 @@ const BlogPrev = (props: Props) => {
             width={1920}
             height={1080}
             alt={props.title}
-            className="rounded-xl "
+            className="rounded-xl"
             property="cover"
+            quality={100}
           />
         </div> */}
 
-          <h1 className="text-xl font-semibold text-black dark:text-white  md:text-2xl">
+          <h1 className="text-xl font-semibold bg-gradient-to-r dark:from-cyan-400 dark:to-green-300 text-transparent bg-clip-text from-cyan-400 to-blue-600  md:text-2xl">
             {props.title}
           </h1>
           <div className="flex flex-row justify-between text-gray-600 dark:text-gray-400  ">
