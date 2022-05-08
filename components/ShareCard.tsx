@@ -7,8 +7,8 @@ type Props = {
 
 const ShareCard = (props: Props) => {
   return (
-    <div className="mt-8 flex flex-col  items-center justify-center gap-2 rounded-xl bg-gray-50 py-2 md:py-4 dark:bg-zinc-900 md:flex-row md:gap-8">
-      <p className="dark:text-blueGray-500  text-xl font-medium text-gray-600 dark:text-gray-400">
+    <div className="mt-8 flex flex-col  items-center justify-center gap-x-4 rounded-xl bg-gray-50 py-8 md:py-4 dark:bg-zinc-900 sm:flex-row md:gap-8">
+      <p className="text-xl font-medium text-gray-600 dark:text-gray-400">
         Spread the word
       </p>
 
