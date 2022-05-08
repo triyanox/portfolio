@@ -53,7 +53,7 @@ const Blog: NextPage<PostsProps> = ({ posts }) => {
             No posts found.
           </p>
         )}{' '}
-        <div className="mb-4 mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mb-4 mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {filteredBlogPosts
             .sort(
               (
