@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         sans: ['Generator', ...defaultTheme.fontFamily.sans],
       },
+     
     },
   },
   plugins: [require('@tailwindcss/typography')],
