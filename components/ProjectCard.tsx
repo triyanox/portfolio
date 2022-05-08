@@ -14,7 +14,7 @@ interface Props {
 
 const ProjectCard = (props: Props) => {
   return (
-    <div className=" flex w-full items-center justify-start gap-4 rounded-[30px] bg-gray-100 dark:bg-zinc-900">
+    <div className=" flex w-full items-center justify-start gap-4 rounded-[30px] bg-gray-50 dark:bg-zinc-900">
       <div className=" flex  w-full flex-col justify-center gap-4 rounded-[12px]  p-4 px-6   ">
         <div className=" mt-2 grid grid-cols-2 items-start justify-between">
           <div className="text-2xl ">
