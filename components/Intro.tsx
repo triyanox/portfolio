@@ -34,8 +34,9 @@ const Intro = () => {
         <Image
           src={achaq}
           width={400}
-          className="rounded-full"
+          className="rounded-full "
           height={400}
+          quality={100}
           alt="Achaq"
         />
       </div>
