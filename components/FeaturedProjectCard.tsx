@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import { SiGithub, SiOpenlayers } from 'react-icons/si'
 import Link from 'next/link'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
+import {motion, AnimatePresence, useAnimation} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
 
 type Props = {
   source: string
@@ -14,8 +16,46 @@ type Props = {
 }
 
 const FeaturedProjectsCard = (props: Props) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  
   return (
-    <div className="flex  w-full  items-center justify-start gap-4 rounded-[30px] bg-zinc-100  dark:bg-zinc-900 ">
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={{
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transformOrigin: "center",
+            transition: {
+              duration: 0.4,
+              dump: 0.8,
+              stiffness: 100,
+              ease: "easeInOut",
+            },
+          },
+          hidden: {
+            scale: 0,
+            opacity: 0,
+            transformOrigin: "center",
+            transition: {
+              duration: 0.4,
+              dump: 0.8,
+              stiffness: 100,
+              ease: "easeInOut",
+
+            },
+          },
+        }}
+
+     className="flex  w-full  items-center justify-start gap-4 rounded-[30px] bg-gray-50  dark:bg-zinc-900 ">
       <div className="relative flex h-full w-full flex-col justify-center gap-2 rounded-[12px]  p-8    ">
         <div className="flex flex-col gap-4 ">
           {/* <div>
@@ -29,7 +69,7 @@ const FeaturedProjectsCard = (props: Props) => {
             />
           </div> */}
           <div className="grid grid-cols-2 items-start justify-between">
-            <h1 className="text-2xl font-semibold  text-black dark:text-white  md:text-2xl ">
+            <h1 className="text-2xl font-semibold  bg-gradient-to-r dark:from-cyan-400 dark:to-green-300 text-transparent bg-clip-text from-cyan-400 to-blue-600 md:text-2xl ">
               {props.title}
             </h1>
 
@@ -80,7 +120,8 @@ const FeaturedProjectsCard = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
+   
   )
 }
 
