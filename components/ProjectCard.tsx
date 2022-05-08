@@ -14,7 +14,7 @@ interface Props {
 
 const ProjectCard = (props: Props) => {
   return (
-    <div className=" flex w-full items-center justify-start gap-4 rounded-[30px] bg-zinc-100 dark:bg-zinc-900">
+    <div className=" flex w-full items-center justify-start gap-4 rounded-[30px] bg-gray-100 dark:bg-zinc-900">
       <div className=" flex  w-full flex-col justify-center gap-4 rounded-[12px]  p-4 px-6   ">
         <div className=" mt-2 grid grid-cols-2 items-start justify-between">
           <div className="text-2xl ">
@@ -46,11 +46,11 @@ const ProjectCard = (props: Props) => {
           </div>
         </div>
         <div className="grid w-full grid-rows-3 items-start justify-start gap-2">
-          <h1 className="text-md  text-black dark:text-white  md:text-lg">
+          <h1 className="text-sm  text-black dark:text-white  md:text-md font-bold">
             {props.title}
           </h1>
 
-          <div className="flex flex-row items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+          <div className="flex flex-row items-center gap-2 font-semibold text-xs md:text-sm text-gray-600 dark:text-gray-400">
             {props.stack.map((tech, i) => (
               <p key={i}>{tech}</p>
             ))}
