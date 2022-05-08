@@ -3,8 +3,8 @@ import achaq from '../assets/achaq.png'
 
 const AuthorCard = () => {
   return (
-    <div className="mt-24 flex flex-col items-center justify-center gap-4 rounded-xl bg-gray-100 p-6 dark:bg-zinc-900 sm:flex-row sm:gap-12">
-      <div className="justify-cente flex w-1/2 flex-col items-center md:w-full">
+    <div className="mt-24 flex flex-col items-center justify-center gap-4 rounded-xl bg-gray-50 p-6 dark:bg-zinc-900 sm:flex-row sm:gap-12">
+      <div className="justify-cente  w-1/2 hidden sm:flex md:w-2/3 flex-col items-center lg:w-full">
         <Image
           src={achaq}
           alt="Achaq"
@@ -14,8 +14,8 @@ const AuthorCard = () => {
           className="rounded-full"
         />
       </div>
-      <div className="flex flex-col items-start justify-center gap-1">
-        <h3 className="text-lg font-semibold  text-black dark:text-white  md:text-xl">
+      <div className="flex flex-col items-start justify-center ">
+        <h3 className="text-xl font-semibold  text-black dark:text-white  md:text-2xl">
           Mohamed Achaq
         </h3>
         <p className="text-md font-normal text-gray-600 dark:text-gray-400 ">
