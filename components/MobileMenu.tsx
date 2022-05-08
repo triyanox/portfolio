@@ -17,7 +17,7 @@ function NavItem({ href, text }: NavItems) {
 
   return (
     <NextLink href={href}>
-      <a className={cn(isActive ? 'font-semibold' : '', 'mb-4 p-2')}>
+      <a className={cn(isActive ? 'font-bold bg-gradient-to-r dark:from-cyan-400 dark:to-green-300 text-transparent bg-clip-text from-cyan-400 to-blue-600' : '', 'mb-4 p-2 font-semibold')}>
         <span>{text}</span>
       </a>
     </NextLink>
