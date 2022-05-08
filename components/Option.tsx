@@ -41,7 +41,7 @@ export const OptionSelected = (props: Option) => {
           damping: 15,
         }}
         onClick={props.handleClick}
-        className="rounded-full  px-4 py-1 text-2xl font-semibold text-gray-800  dark:text-gray-200"
+        className="rounded-full  px-4 py-1 text-2xl font-semibold bg-gradient-to-r dark:from-cyan-400 dark:to-green-300 text-transparent bg-clip-text from-cyan-400 to-blue-600 "
       >
         {props.text}
       </motion.button>
