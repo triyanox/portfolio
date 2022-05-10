@@ -31,22 +31,24 @@ const FeaturedProjectsCard = (props: Props) => {
         initial="hidden"
         variants={{
           visible: {
+            translateY:0,
             scale: 1,
             opacity: 1,
-            transformOrigin: "center",
+            transformOrigin: "bottom",
             transition: {
-              duration: 0.4,
+              duration: 0.5,
               dump: 0.8,
               stiffness: 100,
               ease: "easeInOut",
             },
           },
           hidden: {
-            scale: 0,
-            opacity: 0,
-            transformOrigin: "center",
+            translateY: 100,
+            scale: 0.6,
+            opacity: 0.2,
+            transformOrigin: "bottom",
             transition: {
-              duration: 0.4,
+              duration: 0.5,
               dump: 0.8,
               stiffness: 100,
               ease: "easeInOut",
