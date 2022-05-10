@@ -1,5 +1,7 @@
-import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
+import {  useEffect } from 'react'
+import {motion, useAnimation} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
 interface Props {
   readTime: number
   date: string
@@ -8,30 +10,47 @@ interface Props {
   image: string
 }
 const BlogPrev = (props: Props) => {
+ const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+  
   return (
-    <AnimatePresence exitBeforeEnter>
       <motion.div
-        initial={{
-          scale: 0,
-          opacity: 0,
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={{
+          visible: {
+            translateY:0,
+            scale: 1,
+            opacity: 1,
+            transformOrigin: "bottom",
+            transition: {
+              duration: 0.3,
+              dump: 0.3,
+              stiffness: 100,
+              ease: "easeIn",
+            },
+          },
+          hidden: {
+            translateY: 50,
+            scale: 0.6,
+            opacity: 0.2,
+            transformOrigin: "bottom",
+            transition: {
+              duration: 0.3,
+              dump: 0.3,
+              stiffness: 100,
+              ease: "easeOut",
+
+            },
+          },
         }}
-        animate={{
-          scale: 1,
-          opacity: 1,
-          transformOrigin: 'center',
-        }}
-        exit={{
-          scale: 0,
-          opacity: 0,
-        }}
-        transition={{
-          duration: 0.6,
-          dump: 0.8,
-          ease: 'easeInOut',
-          stiffness: 100,
-          elapsed: 1,
-        }}
-        className="relative flex h-full w-full flex-col justify-center  rounded-[30px] bg-gray-50 p-8   transition-all duration-300 hover:scale-105  dark:bg-zinc-900"
+        className="relative focus:outline-none focus-within:outline-none ring-zinc-900 dark:ring-zinc-50 ring-offset-4 ring-offset-white  transition duration-300 focus-within:ring-2 focus-within:ring-zinc-900 dark:focus-within:ring-zinc-50 hover:ring-2 hover:ring-zinc-900 dark:hover:ring-zinc-50 focus:ring-2 focus:ring-zinc-900 dark:focus:ring-zinc-50 group-hover:ring-2 group-hover:ring-zinc-900 dark:group-hover:ring-zinc-50 group-focus:ring-2 group-focus:ring-zinc-900 dark:group-focus:ring-zinc-50 dark:ring-offset-gray-900 flex h-full w-full flex-col justify-center  rounded-[30px] bg-gray-50 p-8  hover:scale-105  dark:bg-zinc-900"
       >
         <div className="flex flex-col gap-4 ">
           {/* <div>
@@ -58,7 +77,6 @@ const BlogPrev = (props: Props) => {
           </div>
         </div>
       </motion.div>
-    </AnimatePresence>
   )
 }
 
