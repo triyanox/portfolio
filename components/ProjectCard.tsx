@@ -2,6 +2,9 @@ import { BsFolderFill } from 'react-icons/bs/index.js'
 import { SiGithub } from 'react-icons/si/index.js'
 import { SiOpenlayers } from 'react-icons/si/index.js'
 import Link from 'next/link'
+import {  useEffect } from 'react'
+import {motion, useAnimation} from 'framer-motion'
+import {useInView} from 'react-intersection-observer'
 
 interface Props {
   title: string
@@ -13,8 +16,45 @@ interface Props {
 }
 
 const ProjectCard = (props: Props) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
-    <div className=" flex w-full items-center justify-start gap-4 rounded-[30px] bg-gray-50 dark:bg-zinc-900">
+    <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={{
+          visible: {
+            translateY:0,
+            scale: 1,
+            opacity: 1,
+            transformOrigin: "bottom",
+            transition: {
+              duration: 0.5,
+              dump: 0.8,
+              stiffness: 100,
+              ease: "easeInOut",
+            },
+          },
+          hidden: {
+            translateY: 100,
+            scale: 0.6,
+            opacity: 0.2,
+            transformOrigin: "bottom",
+            transition: {
+              duration: 0.5,
+              dump: 0.8,
+              stiffness: 100,
+              ease: "easeInOut",
+
+            },
+          },
+        }} className=" flex w-full items-center justify-start gap-4 rounded-[30px] bg-gray-50 dark:bg-zinc-900">
       <div className=" flex  w-full flex-col justify-center gap-4 rounded-[12px]  p-4 px-6   ">
         <div className=" mt-2 grid grid-cols-2 items-start justify-between">
           <div className="text-2xl ">
@@ -57,7 +97,7 @@ const ProjectCard = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
