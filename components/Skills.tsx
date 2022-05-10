@@ -1,9 +1,28 @@
 import { Description } from './Description'
 import { Option, OptionSelected } from './Option'
 import { useState } from 'react'
-
+import {
+  Figma,
+  Adobeillustrator,
+  Adobephotoshop,
+  Nodedotjs,
+  Express,
+  Mongodb,
+  Javascript,
+  Typescript,
+  Graphql,
+  Python,
+  Reactdotjs,
+  Css3,
+  Tailwindcss,
+  Html5,
+  Nextdotjs,
+  Sass,
+  Postgresql,
+  Go,
+} from './Icons'
 const Skills = () => {
-  const [skill, setSkill] = useState('UI')
+  const [skill, setSkill] = useState('Frontend')
 
   return (
     <section className="mt-24 flex w-full flex-col justify-center gap-y-4 px-8 md:px-16 ">
@@ -16,7 +35,23 @@ const Skills = () => {
         </p>
       </div>
       <div className="flex w-full flex-col justify-center  gap-4 md:flex-row">
-        <div className="mb-4 flex w-full flex-row items-start justify-start gap-2 gap-x-4 overflow-scroll md:overflow-hidden md:mb-0 md:flex-col ">
+        <div className="mb-4 flex w-full flex-row items-start justify-start gap-2 gap-x-4 overflow-scroll md:mb-0 md:flex-col md:overflow-hidden ">
+          {skill === 'Frontend' ? (
+            <OptionSelected
+              text="Frontend"
+              handleClick={() => setSkill('Frontend')}
+            />
+          ) : (
+            <Option text="Frontend" handleClick={() => setSkill('Frontend')} />
+          )}
+          {skill === 'Backend' ? (
+            <OptionSelected
+              text="Backend"
+              handleClick={() => setSkill('Backend')}
+            />
+          ) : (
+            <Option text="Backend" handleClick={() => setSkill('Backend')} />
+          )}
           {skill === 'UI' ? (
             <OptionSelected text="UI" handleClick={() => setSkill('UI')} />
           ) : (
@@ -27,22 +62,7 @@ const Skills = () => {
           ) : (
             <Option text="UX" handleClick={() => setSkill('UX')} />
           )}
-          {skill === 'Backend' ? (
-            <OptionSelected
-              text="Backend"
-              handleClick={() => setSkill('Backend')}
-            />
-          ) : (
-            <Option text="Backend" handleClick={() => setSkill('Backend')} />
-          )}
-          {skill === 'Frontend' ? (
-            <OptionSelected
-              text="Frontend"
-              handleClick={() => setSkill('Frontend')}
-            />
-          ) : (
-            <Option text="Frontend" handleClick={() => setSkill('Frontend')} />
-          )}
+
           {skill === 'Softskills' ? (
             <OptionSelected
               text="SoftSkills"
@@ -56,10 +76,44 @@ const Skills = () => {
           )}
         </div>
         <div className="   flex w-full flex-col items-start justify-center gap-2 md:mt-0">
+          {skill === 'Frontend' && (
+            <Description
+              tools={[
+                <Html5 />,
+                <Css3 />,
+                <Sass />,
+                <Javascript />,
+                <Reactdotjs />,
+                <Nextdotjs />,
+                <Typescript />,
+                <Tailwindcss />,
+              ]}
+              text="
+          when I am working on a new project, I am always thinking about how to make it look and feel better, and how to make it work better."
+            />
+          )}
+          {skill === 'Backend' && (
+            <Description
+              tools={[
+                <Javascript />,
+                <Typescript />,
+                <Python />,
+                <Go />,
+                <Nodedotjs />,
+                <Express />,
+                <Mongodb />,
+                <Postgresql />,
+                <Graphql />,
+              ]}
+              text="
+            I love building backend services, and I am always thinking about how to make them better and more efficient."
+            />
+          )}
           {skill === 'UI' && (
             <Description
+              tools={[<Figma />, <Adobeillustrator />, <Adobephotoshop />]}
               text="
-          I love creating beautiful user interfaces, and everytime I am designing a new one, I am always thinking about delivering an intuitive and easy to use experience."
+         I am always thinking about delivering an intuitive and easy to use interface."
             />
           )}
 
@@ -69,18 +123,7 @@ const Skills = () => {
           User exerience is the most important thing when it comes to designing a web application, and my main focus are accessibility, usability and performance."
             />
           )}
-          {skill === 'Backend' && (
-            <Description
-              text="
-            I love building backend services, and I am always thinking about how to make them better and more efficient."
-            />
-          )}
-          {skill === 'Frontend' && (
-            <Description
-              text="
-          when I am working on a new project, I am always thinking about how to make it look and feel better, and how to make it work better."
-            />
-          )}
+
           {skill === 'Softskills' && (
             <Description
               text="
