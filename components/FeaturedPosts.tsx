@@ -66,7 +66,7 @@ const FeaturedPosts = (props: PostsProps) => {
           )}
       </div>
 
-      <div className="flex w-full flex-col items-end justify-center">
+      <div className="flex w-full mt-8 flex-col items-end justify-center">
         <Link href="/blog" passHref>
           <a>
             <Button text="View All Posts" />
