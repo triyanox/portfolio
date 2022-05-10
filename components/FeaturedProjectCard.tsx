@@ -1,8 +1,7 @@
-import Image from 'next/image'
 import { SiGithub, SiOpenlayers } from 'react-icons/si'
 import Link from 'next/link'
 import { ReactNode, useEffect } from 'react'
-import {motion, AnimatePresence, useAnimation} from 'framer-motion'
+import {motion, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 
 type Props = {
