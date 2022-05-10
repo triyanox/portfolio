@@ -83,7 +83,7 @@ const FeaturedProjects = () => {
           ]}
         />
       </div>
-      <div className="flex w-full flex-col items-end justify-center">
+      <div className="flex w-full flex-col mt-8 items-end justify-center">
         <Link href="/projects" passHref>
           <a>
             <Button text="View More Projects" />
