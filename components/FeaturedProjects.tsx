@@ -33,7 +33,7 @@ const FeaturedProjects = () => {
           Projects I have worked on
         </p>
       </div>
-      <div className="mb-4 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="-full mb-4 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
         <FeaturedProjectsCard
           title="Portfolio"
           image="/projects/achaqcodes.png"
@@ -83,7 +83,7 @@ const FeaturedProjects = () => {
           ]}
         />
       </div>
-      <div className="flex w-full flex-col mt-8 items-end justify-center">
+      <div className="mt-8 flex w-full flex-col items-end justify-center">
         <Link href="/projects" passHref>
           <a>
             <Button text="View More Projects" />
