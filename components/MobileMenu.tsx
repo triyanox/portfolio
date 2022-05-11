@@ -17,7 +17,14 @@ function NavItem({ href, text }: NavItems) {
 
   return (
     <NextLink href={href}>
-      <a className={cn(isActive ? 'font-bold bg-gradient-to-r dark:from-cyan-400 dark:to-green-300 text-transparent bg-clip-text from-cyan-400 to-blue-600 ' : '', 'mb-4 p-2 font-semibold')}>
+      <a
+        className={cn(
+          isActive
+            ? 'bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text font-bold text-transparent dark:from-cyan-400 dark:to-green-300 '
+            : '',
+          'mb-4 p-2 font-semibold'
+        )}
+      >
         <span>{text}</span>
       </a>
     </NextLink>
@@ -35,7 +42,6 @@ function MobileMenu() {
               scale: 0,
               opacity: 0,
               borderRadius: '999px',
-              
             }}
             animate={{
               scale: 1,
@@ -55,7 +61,7 @@ function MobileMenu() {
               stiffness: 100,
               elapsed: 1,
             }}
-            className="fixed bg-opacity-70 backdrop-blur-xl dark:bg-opacity-70 dark:backdrop-blur-xl top-0 bottom-0 z-40 m-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden   pt-12 text-4xl font-light text-black  dark:text-white bg-white dark:bg-black"
+            className="fixed top-0  bottom-0 z-40 m-0 flex h-screen w-full flex-col items-center justify-center bg-white bg-opacity-70 pt-12 text-4xl    font-light text-black backdrop-blur-xl dark:bg-black  dark:bg-opacity-70 dark:text-white dark:backdrop-blur-xl"
           >
             <NavItem href="/" text="Home" />
             <NavItem href="/projects" text="Projects" />
