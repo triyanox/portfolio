@@ -26,7 +26,7 @@ const FeaturedPosts = (props: PostsProps) => {
           Posts I have written
         </p>
       </div>
-      <div className="mb-4 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="mb-4 grid w-full grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
         {props.posts
           .sort(
             (
@@ -66,7 +66,7 @@ const FeaturedPosts = (props: PostsProps) => {
           )}
       </div>
 
-      <div className="flex w-full mt-8 flex-col items-end justify-center">
+      <div className="mt-8 flex w-full flex-col items-end justify-center">
         <Link href="/blog" passHref>
           <a>
             <Button text="View All Posts" />
