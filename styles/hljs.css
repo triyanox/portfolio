@@ -34,7 +34,7 @@ code.hljs {
 .hljs-selector-tag,
 .hljs-template-variable,
 .hljs-variable {
-  color: #777abc;
+  @apply text-green-500 dark:text-cyan-400;
 }
 .hljs-attr,
 .hljs-link,
@@ -42,51 +42,49 @@ code.hljs {
 .hljs-number,
 .hljs-symbol,
 .hljs-variable.constant_ {
-  color: #94929e;
+  @apply text-blue-600 dark:text-purple-500;
 }
 .hljs-class .hljs-title,
 .hljs-title,
 .hljs-title.class_ {
-  color: #4f9062;
+  @apply text-green-500 dark:text-cyan-400;
 }
 .hljs-strong {
-  font-weight: 700;
-  color: #4f9062;
+  @apply font-bold text-green-600 dark:text-cyan-600;
 }
 .hljs-addition,
 .hljs-code,
 .hljs-string,
 .hljs-title.class_.inherited__ {
-  color: #6562a8;
+  @apply text-green-500 dark:text-cyan-400;
 }
 .hljs-built_in,
 .hljs-doctag,
 .hljs-keyword.hljs-atrule,
 .hljs-quote,
 .hljs-regexp {
-  color: #226f68;
+  @apply text-orange-500 dark:text-amber-400;
 }
 .hljs-attribute,
 .hljs-function .hljs-title,
 .hljs-section,
 .hljs-title.function_,
 .ruby .hljs-property {
-  color: #4d6bb6;
+  @apply text-green-500 dark:text-cyan-400;
 }
 .diff .hljs-meta,
 .hljs-keyword,
 .hljs-template-tag,
 .hljs-type {
-  color: #716cae;
+  @apply text-cyan-400 dark:text-green-500;
 }
 .hljs-emphasis {
-  color: #716cae;
-  font-style: italic;
+  @apply italic text-green-500 dark:text-cyan-400;
 }
 .hljs-meta,
 .hljs-meta .hljs-keyword,
 .hljs-meta .hljs-string {
-  color: #8c70a7;
+  @apply text-green-500 dark:text-cyan-400;
 }
 .hljs-meta .hljs-keyword,
 .hljs-meta-keyword {
