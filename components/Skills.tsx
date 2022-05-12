@@ -11,7 +11,6 @@ import {
   Javascript,
   Typescript,
   Graphql,
-  Python,
   Reactdotjs,
   Css3,
   Tailwindcss,
@@ -97,7 +96,6 @@ const Skills = () => {
               tools={[
                 <Javascript />,
                 <Typescript />,
-                <Python />,
                 <Go />,
                 <Nodedotjs />,
                 <Express />,
