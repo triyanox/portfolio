@@ -15,35 +15,7 @@ const Intro = () => {
   }, [controls, inView])
   return (
     <section className="relative flex w-full flex-col-reverse items-center  justify-center overflow-hidden px-8 pb-8   md:h-screen md:flex-row md:px-16  md:pb-0">
-      <motion.div
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        variants={{
-          visible: {
-            translateX: 0,
-            opacity: 1,
-            transformOrigin: 'bottom',
-            transition: {
-              duration: 0.5,
-              dump: 0.8,
-              stiffness: 100,
-              ease: 'easeInOut',
-            },
-          },
-          hidden: {
-            translateX: -100,
-            opacity: 0,
-            transformOrigin: 'bottom',
-            transition: {
-              duration: 0.5,
-              dump: 0.8,
-              stiffness: 100,
-              ease: 'easeInOut',
-            },
-          },
-        }}
-        className="mt-24 flex w-full flex-col items-start justify-center gap-2 md:mt-0"
+      <div className="mt-24 flex w-full flex-col items-start justify-center gap-2 md:mt-0"
       >
         <h1 className="text-4xl font-semibold text-black dark:text-white">
           Mohamed Achaq
@@ -68,7 +40,7 @@ const Intro = () => {
             </a>
           </Link>
         </div>
-      </motion.div>
+      </div>
       <motion.div
         ref={ref}
         animate={controls}
