@@ -2,10 +2,49 @@ import { Button, ButtonWhite } from './EmailButton'
 import achaq from '../assets/achaq.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 const Intro = () => {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible')
+    }
+  }, [controls, inView])
   return (
     <section className="relative flex w-full flex-col-reverse items-center  justify-center overflow-hidden px-8 pb-8   md:h-screen md:flex-row md:px-16  md:pb-0">
-      <div className="mt-24 flex w-full flex-col items-start justify-center gap-2 md:mt-0">
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={{
+          visible: {
+            translateX: 0,
+            opacity: 1,
+            transformOrigin: 'bottom',
+            transition: {
+              duration: 0.5,
+              dump: 0.8,
+              stiffness: 100,
+              ease: 'easeInOut',
+            },
+          },
+          hidden: {
+            translateX: -100,
+            opacity: 0,
+            transformOrigin: 'bottom',
+            transition: {
+              duration: 0.5,
+              dump: 0.8,
+              stiffness: 100,
+              ease: 'easeInOut',
+            },
+          },
+        }}
+        className="mt-24 flex w-full flex-col items-start justify-center gap-2 md:mt-0"
+      >
         <h1 className="text-4xl font-semibold text-black dark:text-white">
           Mohamed Achaq
         </h1>
@@ -29,8 +68,39 @@ const Intro = () => {
             </a>
           </Link>
         </div>
-      </div>
-      <div className="mt-24 hidden w-full flex-col items-center justify-center gap-2 md:mt-0 md:flex">
+      </motion.div>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={{
+          visible: {
+            translateY: 0,
+            scale: 1,
+            opacity: 1,
+            transformOrigin: 'bottom',
+            transition: {
+              duration: 0.5,
+              dump: 0.8,
+              stiffness: 100,
+              ease: 'easeInOut',
+            },
+          },
+          hidden: {
+            translateY: 100,
+            scale: 0.6,
+            opacity: 0.2,
+            transformOrigin: 'bottom',
+            transition: {
+              duration: 0.5,
+              dump: 0.8,
+              stiffness: 100,
+              ease: 'easeInOut',
+            },
+          },
+        }}
+        className="mt-24 hidden w-full flex-col items-center justify-center gap-2 md:mt-0 md:flex"
+      >
         <Image
           src={achaq}
           width={400}
@@ -39,7 +109,7 @@ const Intro = () => {
           quality={100}
           alt="Achaq"
         />
-      </div>
+      </motion.div>
     </section>
   )
 }
