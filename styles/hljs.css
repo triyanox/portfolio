@@ -76,7 +76,7 @@ code.hljs {
 .hljs-keyword,
 .hljs-template-tag,
 .hljs-type {
-  @apply text-cyan-400 dark:text-green-500;
+  @apply text-blue-600 dark:text-green-500;
 }
 .hljs-emphasis {
   @apply italic text-green-500 dark:text-cyan-400;
