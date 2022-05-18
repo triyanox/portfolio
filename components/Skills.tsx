@@ -20,47 +20,12 @@ import {
   Postgresql,
   Go,
 } from './Icons'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 const Skills = () => {
   const [skill, setSkill] = useState('Frontend')
-  const controls = useAnimation()
-  const [ref, inView] = useInView()
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible')
-    }
-  }, [controls, inView])
+  
   return (
     <section className="mt-24 flex w-full flex-col justify-center gap-y-4 px-8 md:px-16 ">
-      <motion.div
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        variants={{
-          visible: {
-            translateX: 0,
-            opacity: 1,
-            transformOrigin: 'bottom',
-            transition: {
-              duration: 0.5,
-              dump: 0.8,
-              stiffness: 100,
-              ease: 'easeInOut',
-            },
-          },
-          hidden: {
-            translateX: -100,
-            opacity: 0,
-            transformOrigin: 'bottom',
-            transition: {
-              duration: 0.5,
-              dump: 0.8,
-              stiffness: 100,
-              ease: 'easeInOut',
-            },
-          },
-        }}
+     <div
         className="flex flex-col items-start justify-center"
       >
         <h2 className="mb-2 text-2xl font-semibold text-gray-800 dark:text-gray-200">
@@ -69,37 +34,8 @@ const Skills = () => {
         <p className="mb-8 text-lg font-medium text-gray-600 dark:text-gray-400 ">
           My skill set
         </p>
-      </motion.div>
-      <motion.div
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        variants={{
-          visible: {
-            translateY: 0,
-            scale: 1,
-            opacity: 1,
-            transformOrigin: 'bottom',
-            transition: {
-              duration: 0.5,
-              dump: 0.8,
-              stiffness: 100,
-              ease: 'easeInOut',
-            },
-          },
-          hidden: {
-            translateY: 100,
-            scale: 0.6,
-            opacity: 0.2,
-            transformOrigin: 'bottom',
-            transition: {
-              duration: 0.5,
-              dump: 0.8,
-              stiffness: 100,
-              ease: 'easeInOut',
-            },
-          },
-        }}
+      </div>
+      <div
         className="flex w-full flex-col justify-center  gap-4 md:flex-row"
       >
         <div className="mb-4 flex w-full flex-row items-start justify-start gap-2 gap-x-4 overflow-scroll md:mb-0 md:flex-col md:overflow-hidden ">
@@ -198,7 +134,7 @@ const Skills = () => {
             />
           )}
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
