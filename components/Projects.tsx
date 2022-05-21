@@ -20,6 +20,7 @@ import {
   Nextdotjs,
   Sass,
   Tailwindcss,
+  SocketIo,
 } from './Icons'
 
 function Projects() {
@@ -56,7 +57,7 @@ function Projects() {
           preview="https://shortify.achaq.codes"
           source="https://github.com/triyanox/shortify-client"
           id={2}
-          description="URL shortener service built with Next.js,  Node.js, Express, and MongoDB."
+          description="URL shortener platform built with Next.js,  Node.js, Express, and MongoDB."
           stack={[
             <Nextdotjs />,
             <Reactdotjs />,
@@ -80,6 +81,24 @@ function Projects() {
             <Tailwindcss />,
             <Typescript />,
             <Nodedotjs />,
+            <Express />,
+            <Mongodb />,
+          ]}
+        />
+        <FeaturedProjectsCard
+          title="Conversa"
+          image="/projects/conversa.png"
+          preview="https://conversa.achaq.codes"
+          source="https://github.com/triyanox/conversa-client"
+          id={1}
+          description="A text based chat build with Socket.io, Next.js, Express, MongoDB, and Typescript"
+          stack={[
+            <Nextdotjs />,
+            <Reactdotjs />,
+            <Tailwindcss />,
+            <Typescript />,
+            <Nodedotjs />,
+            <SocketIo />,
             <Express />,
             <Mongodb />,
           ]}
