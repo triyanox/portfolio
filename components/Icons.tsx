@@ -21,6 +21,7 @@ import {
   SiAdobeillustrator,
   SiPostgresql,
   SiGo,
+  SiSocketdotio,
 } from 'react-icons/si'
 
 export const Figma = () => {
@@ -370,6 +371,22 @@ export const Adobephotoshop = () => {
       transition-all duration-100 group-hover:scale-100 dark:bg-white dark:text-black"
       >
         Photoshop
+      </span>
+    </div>
+  )
+}
+
+export const SocketIo = () => {
+  return (
+    <div className="group transition-all duration-150 hover:scale-125 hover:text-black dark:hover:text-white">
+      <SiSocketdotio />
+      <span
+        className="absolute -right-6 m-2 w-auto min-w-max origin-top scale-0 rounded-md
+                      bg-black p-2  text-xs font-bold 
+      text-white shadow-md 
+      transition-all duration-100 group-hover:scale-100 dark:bg-white dark:text-black"
+      >
+        Socket.io
       </span>
     </div>
   )
