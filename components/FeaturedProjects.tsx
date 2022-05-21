@@ -75,7 +75,7 @@ const FeaturedProjects = () => {
           preview="https://conversa.achaq.codes"
           source="https://github.com/triyanox/conversa-client"
           id={3}
-          description="A text based chat build with Socket.io, Next.js, Express, MongoDB, and Typescript"
+          description="A WebSockets based text messaging app built with Socket.io, Next.js, Express, MongoDB, and Typescript"
           stack={[
             <Nextdotjs />,
             <Reactdotjs />,
