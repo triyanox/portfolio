@@ -128,7 +128,7 @@ const PostPage: React.FC<PostProps> = ({
       link={`https://achaq.codes/blog/${link}`}
       date={new Date(date).toISOString()}
     >
-      <article className="prose-lg prose-pre:text-md prose mx-auto mt-8 w-full px-8 pb-24 prose-code:rounded-lg prose-code:text-gray-600 prose-pre:rounded-xl   prose-pre:bg-gray-100 dark:prose-invert dark:prose-code:text-gray-400  dark:prose-pre:bg-zinc-900  md:px-16 lg:prose-xl lg:prose-pre:text-xl">
+      <article className="prose-lg prose mx-auto mt-8 w-full px-8 pb-24 prose-code:rounded-lg prose-code:text-gray-600 prose-pre:rounded-xl   prose-pre:bg-gray-100 dark:prose-invert dark:prose-code:text-gray-400  dark:prose-pre:bg-zinc-900  md:px-16 lg:prose-xl ">
         <PostHead title={title} date={date} readTime={readTime} />
         <MDXRemote {...mdxSource} components={components as any} />
         <AuthorCard />
