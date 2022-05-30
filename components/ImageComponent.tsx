@@ -23,7 +23,6 @@ export default function Image({
     <div className="container">
       
         <NextImage
-          onLoadingComplete={() => setLoaded(true)}
           src={src}
           alt={alt}
           width={width}
