@@ -16,12 +16,12 @@ export default function Image({
   height,
   blurDataURL,
 }: ImageProps) {
-  const [loaded, setLoaded] = useState<boolean>(false)
-  const zoom = loaded ? 'zoom' : ''
+  // const [loaded, setLoaded] = useState<boolean>(false)
+  // const zoom = loaded ? 'zoom' : ''
 
   return (
     <div className="container">
-      <div className={zoom}>
+      
         <NextImage
           onLoadingComplete={() => setLoaded(true)}
           src={src}
@@ -34,7 +34,6 @@ export default function Image({
           placeholder={blurDataURL ? 'blur' : undefined}
           blurDataURL={blurDataURL}
         />
-      </div>
 
       <style jsx>
         {`
