@@ -14,8 +14,8 @@ const Intro = () => {
     }
   }, [controls, inView])
   return (
-    <section className="relative flex w-full flex-col-reverse items-center  justify-center overflow-hidden px-8 pb-8   md:h-screen md:flex-row md:px-16  md:pb-0">
-      <div className="mt-24 flex w-full flex-col items-start justify-center gap-2 md:mt-0">
+    <section className="relative flex w-full flex-col-reverse items-center  justify-center overflow-hidden px-8 pb-8   md:h-screen lg:flex-row md:px-16  md:pb-0">
+      <div className="mt-24 flex w-full flex-col items-start justify-center gap-2 lg:mt-0">
         <h1 className="text-4xl font-semibold text-black dark:text-white">
           Mohamed Achaq
         </h1>
@@ -70,7 +70,7 @@ const Intro = () => {
             },
           },
         }}
-        className="mt-24 hidden w-full flex-col items-center justify-center gap-2 md:mt-0 md:flex"
+        className="mt-24 hidden w-full flex-col items-center justify-center gap-2 lg:mt-0 lg:flex"
       >
         <Image
           src={achaq}
