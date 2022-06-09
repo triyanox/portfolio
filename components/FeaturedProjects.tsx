@@ -22,6 +22,8 @@ import {
   Sass,
   Tailwindcss,
   SocketIo,
+  Prisma,
+  MySql,
 } from './Icons'
 const FeaturedProjects = () => {
   return (
@@ -36,18 +38,37 @@ const FeaturedProjects = () => {
       </div>
       <div className="-full mb-4 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
         <FeaturedProjectsCard
-          title="Shortify"
-          image="/projects/shortify.png"
-          preview="https://shortify.achaq.codes"
-          source="https://github.com/triyanox/shortify-client"
+          title="Plana"
+          image="/projects/plana.png"
+          preview="https://plana.achaq.codes"
+          source="https://github.com/triyanox/plana"
           id={1}
-          description="URL shortener platform built with Next.js,  Node.js, Express, and MongoDB."
+          description="An application for managing tasks and staying on track."
           stack={[
             <Nextdotjs />,
             <Reactdotjs />,
             <Tailwindcss />,
             <Typescript />,
             <Nodedotjs />,
+            <Prisma />,
+            <MySql />,
+          ]}
+        />
+
+        <FeaturedProjectsCard
+          title="Conversa"
+          image="/projects/conversa.png"
+          preview="https://conversa.achaq.codes"
+          source="https://github.com/triyanox/conversa-client"
+          id={2}
+          description="A WebSockets based text messaging app !"
+          stack={[
+            <Nextdotjs />,
+            <Reactdotjs />,
+            <Tailwindcss />,
+            <Typescript />,
+            <Nodedotjs />,
+            <SocketIo />,
             <Express />,
             <Mongodb />,
           ]}
@@ -57,7 +78,7 @@ const FeaturedProjects = () => {
           image="/projects/omoide.png"
           preview="https://omoide.achaq.codes"
           source="https://github.com/triyanox/omoide-client"
-          id={2}
+          id={3}
           description="A platform for sharing memories and experiences with the world."
           stack={[
             <Nextdotjs />,
@@ -65,24 +86,6 @@ const FeaturedProjects = () => {
             <Tailwindcss />,
             <Typescript />,
             <Nodedotjs />,
-            <Express />,
-            <Mongodb />,
-          ]}
-        />
-        <FeaturedProjectsCard
-          title="Conversa"
-          image="/projects/conversa.png"
-          preview="https://conversa.achaq.codes"
-          source="https://github.com/triyanox/conversa-client"
-          id={3}
-          description="A WebSockets based text messaging app built with Socket.io, Next.js, Express, MongoDB, and Typescript"
-          stack={[
-            <Nextdotjs />,
-            <Reactdotjs />,
-            <Tailwindcss />,
-            <Typescript />,
-            <Nodedotjs />,
-            <SocketIo />,
             <Express />,
             <Mongodb />,
           ]}
