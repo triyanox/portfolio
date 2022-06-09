@@ -44,7 +44,7 @@ const Blog: NextPage<PostsProps> = ({ posts }) => {
           <input
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
-            className=" w-full rounded-lg bg-gray-50 px-11 py-8 text-lg font-medium text-black placeholder-gray-500 ring-gray-500 ring-offset-4 ring-offset-white transition duration-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-gray-500 hover:ring-2 hover:ring-gray-500  focus:outline-none  focus:ring-2 focus:ring-gray-500 disabled:text-gray-400 disabled:ring-0 group-hover:ring-2  group-hover:ring-gray-500 group-focus:ring-2 group-focus:ring-gray-800 dark:bg-zinc-900 dark:text-white  dark:ring-offset-gray-900 dark:disabled:text-gray-500"
+            className=" w-full rounded-lg bg-gray-50 px-11 py-8 text-lg font-medium text-black placeholder-gray-500 ring-black ring-offset-4 transition duration-300 focus-within:outline-none focus-within:ring-2 focus-within:ring-gray-500 hover:ring-2 hover:ring-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500  disabled:text-gray-400  disabled:ring-0 group-hover:ring-2 group-hover:ring-gray-500 group-focus:ring-2 group-focus:ring-gray-800  dark:bg-zinc-900 dark:text-white dark:ring-gray-500 dark:ring-offset-black  dark:disabled:text-gray-500"
             placeholder="Search"
           />
         </div>
