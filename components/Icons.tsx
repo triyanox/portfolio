@@ -1,4 +1,5 @@
 import {
+  SiPrisma,
   SiFirebase,
   SiAdobephotoshop,
   SiAdobexd,
@@ -22,6 +23,8 @@ import {
   SiPostgresql,
   SiGo,
   SiSocketdotio,
+  SiMysql,
+  SiRust,
 } from 'react-icons/si'
 
 export const Figma = () => {
@@ -138,7 +141,7 @@ export const Javascript = () => {
 
 export const Typescript = () => {
   return (
-    <div className=" group transition-all duration-150 hover:scale-125 hover:text-blue-800">
+    <div className=" group transition-all duration-150 hover:scale-125 hover:text-blue-500">
       <SiTypescript className="rounded" />
       <span
         className="absolute -right-8 m-2 w-auto min-w-max origin-top scale-0 rounded-md
@@ -387,6 +390,54 @@ export const SocketIo = () => {
       transition-all duration-100 group-hover:scale-100 dark:bg-white dark:text-black"
       >
         Socket.io
+      </span>
+    </div>
+  )
+}
+
+export const Prisma = () => {
+  return (
+    <div className="group transition-all duration-150 hover:scale-125 hover:text-black dark:hover:text-white">
+      <SiPrisma />
+      <span
+        className="absolute -right-6 m-2 w-auto min-w-max origin-top scale-0 rounded-md
+                      bg-black p-2  text-xs font-bold 
+      text-white shadow-md 
+      transition-all duration-100 group-hover:scale-100 dark:bg-white dark:text-black"
+      >
+        Prisma
+      </span>
+    </div>
+  )
+}
+
+export const MySql = () => {
+  return (
+    <div className="group transition-all duration-150 hover:scale-125 hover:text-blue-600 dark:hover:text-blue-500">
+      <SiMysql />
+      <span
+        className="absolute -right-6 m-2 w-auto min-w-max origin-top scale-0 rounded-md
+                      bg-black p-2  text-xs font-bold 
+      text-white shadow-md 
+      transition-all duration-100 group-hover:scale-100 dark:bg-white dark:text-black"
+      >
+        MySql
+      </span>
+    </div>
+  )
+}
+
+export const Rust = () => {
+  return (
+    <div className="group transition-all duration-150 hover:scale-125 hover:text-amber-700 ">
+      <SiRust />
+      <span
+        className="absolute -right-4 m-2 w-auto min-w-max origin-top scale-0 rounded-md
+                      bg-black p-2  text-xs font-bold 
+      text-white shadow-md 
+      transition-all duration-100 group-hover:scale-100 dark:bg-white dark:text-black"
+      >
+        Rust
       </span>
     </div>
   )
