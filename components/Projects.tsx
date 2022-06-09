@@ -21,6 +21,9 @@ import {
   Sass,
   Tailwindcss,
   SocketIo,
+  Prisma,
+  MySql,
+  Rust,
 } from './Icons'
 
 function Projects() {
@@ -36,38 +39,42 @@ function Projects() {
       </div>
 
       <div className="mb-4 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {' '}
         <FeaturedProjectsCard
-          title="Portfolio"
-          image="/projects/achaqcodes.png"
-          preview="https://achaq.codes"
-          source="https://github.com/triyanox/portfolio"
+          title="Plana"
+          image="/projects/plana.png"
+          preview="https://plana.achaq.codes"
+          source="https://github.com/triyanox/plana"
           id={1}
-          description="My portfolio website built with Next.js, TailwindCSS, and Typescript."
-          stack={[
-            <Nextdotjs />,
-            <Reactdotjs />,
-            <Tailwindcss />,
-            <Typescript />,
-          ]}
-        />
-        <FeaturedProjectsCard
-          title="Shortify"
-          image="/projects/shortify.png"
-          preview="https://shortify.achaq.codes"
-          source="https://github.com/triyanox/shortify-client"
-          id={2}
-          description="URL shortener platform built with Next.js,  Node.js, Express, and MongoDB."
+          description="An application for managing tasks and staying on track."
           stack={[
             <Nextdotjs />,
             <Reactdotjs />,
             <Tailwindcss />,
             <Typescript />,
             <Nodedotjs />,
+            <Prisma />,
+            <MySql />,
+          ]}
+        />
+        <FeaturedProjectsCard
+          title="Conversa"
+          image="/projects/conversa.png"
+          preview="https://conversa.achaq.codes"
+          source="https://github.com/triyanox/conversa-client"
+          id={2}
+          description="A WebSockets based text messaging app !"
+          stack={[
+            <Nextdotjs />,
+            <Reactdotjs />,
+            <Tailwindcss />,
+            <Typescript />,
+            <Nodedotjs />,
+            <SocketIo />,
             <Express />,
             <Mongodb />,
           ]}
         />
+
         <FeaturedProjectsCard
           title="Omoide"
           image="/projects/omoide.png"
@@ -86,19 +93,40 @@ function Projects() {
           ]}
         />
         <FeaturedProjectsCard
-          title="Conversa"
-          image="/projects/conversa.png"
-          preview="https://conversa.achaq.codes"
-          source="https://github.com/triyanox/conversa-client"
-          id={1}
-          description="A WebSockets based text messaging app built with Socket.io, Next.js, Express, MongoDB, and Typescript"
+          title="rsmdp"
+          image="/projects/rsmdp.png"
+          source="https://github.com/triyanox/rsmdp"
+          id={4}
+          description="A markdown to HTML parser written in Rust."
+          stack={[<Rust />]}
+        />
+        <FeaturedProjectsCard
+          title="Portfolio"
+          image="/projects/achaqcodes.png"
+          preview="https://achaq.codes"
+          source="https://github.com/triyanox/portfolio"
+          id={5}
+          description="My portfolio website to showcase my work !"
+          stack={[
+            <Nextdotjs />,
+            <Reactdotjs />,
+            <Tailwindcss />,
+            <Typescript />,
+          ]}
+        />
+        <FeaturedProjectsCard
+          title="Shortify"
+          image="/projects/shortify.png"
+          preview="https://shortify.achaq.codes"
+          source="https://github.com/triyanox/shortify-client"
+          id={6}
+          description="URL shortener platform !"
           stack={[
             <Nextdotjs />,
             <Reactdotjs />,
             <Tailwindcss />,
             <Typescript />,
             <Nodedotjs />,
-            <SocketIo />,
             <Express />,
             <Mongodb />,
           ]}
