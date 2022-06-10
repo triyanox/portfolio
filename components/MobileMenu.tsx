@@ -55,7 +55,7 @@ function MobileMenu() {
               borderRadius: '999px',
             }}
             transition={{
-              duration: 0.4,
+              duration: 0.2,
               dump: 0.8,
               ease: 'easeInOut',
               stiffness: 100,
