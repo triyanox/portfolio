@@ -30,7 +30,7 @@ const BlogPrev = (props: Props) => {
             opacity: 1,
             transformOrigin: "bottom",
             transition: {
-              duration: 0.3,
+              duration: 0.2,
               dump: 0.3,
               stiffness: 100,
               ease: "easeIn",
@@ -42,7 +42,7 @@ const BlogPrev = (props: Props) => {
             opacity: 0.2,
             transformOrigin: "bottom",
             transition: {
-              duration: 0.3,
+              duration: 0.2,
               dump: 0.3,
               stiffness: 100,
               ease: "easeOut",
