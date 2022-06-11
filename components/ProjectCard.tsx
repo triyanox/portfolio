@@ -35,7 +35,7 @@ const ProjectCard = (props: Props) => {
             opacity: 1,
             transformOrigin: "bottom",
             transition: {
-              duration: 0.5,
+              duration: 0.2,
               dump: 0.8,
               stiffness: 100,
               ease: "easeInOut",
@@ -47,7 +47,7 @@ const ProjectCard = (props: Props) => {
             opacity: 0.2,
             transformOrigin: "bottom",
             transition: {
-              duration: 0.5,
+              duration: 0.2,
               dump: 0.8,
               stiffness: 100,
               ease: "easeInOut",
